@@ -1,0 +1,30 @@
+{
+  "name": "graphcms-webhooks",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/willchrist/graphcms-webhooks.git"
+  },
+  "author": "willchrist <william.christian@rga.com>",
+  "license": "MIT",
+  "description": "",
+  "bugs": {
+    "url": "https://github.com/willchrist/graphcms-webhooks/issues"
+  },
+  "homepage": "https://github.com/willchrist/graphcms-webhooks#readme",
+  "scripts": {
+    "start": "node bin/www",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.6"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "engines": {
+    "node": "12.x"
+  }
+}

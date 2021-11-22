@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
 });
 
 app.post('/', (req, res) => {
-    const body = {'content': req.body};
+    const body = {'content': JSON.stringify(req.body)};
 
     const response = fetch('https://discord.com/api/webhooks/912190240448466956/6c00ssVfVdQPZWBpgOnjeHEeH22C62DkcUTf-iCFtfImD7aEzhgkMcH5Tw_DGc1MMT5N', {
         method: 'post',

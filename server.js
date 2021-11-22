@@ -22,7 +22,7 @@ app.post('/', (req, res) => {
         headers: {'Content-Type': 'application/json'}
     });
 
-    res.status(200).json(body);
+    res.status(200).json(req.body);
 });
 
 app.listen(port, () => {

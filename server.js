@@ -1,3 +1,4 @@
+require('dotenv').config();
 const fetch = require('node-fetch');
 const express = require('express');
 const app = express();
@@ -17,7 +18,7 @@ app.get('/', (req, res) => {
 app.post('/', (req, res) => {
     const body = {'content': JSON.stringify(req.body)};
 
-    const response = fetch('https://discord.com/api/webhooks/912190240448466956/6c00ssVfVdQPZWBpgOnjeHEeH22C62DkcUTf-iCFtfImD7aEzhgkMcH5Tw_DGc1MMT5N', {
+    const response = fetch(process.env.DISCRD_WEBHOOKS, {
         method: 'post',
         body: JSON.stringify(body),
         headers: {'Content-Type': 'application/json'}

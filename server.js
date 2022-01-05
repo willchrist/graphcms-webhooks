@@ -3,7 +3,6 @@ const fetch = require('node-fetch');
 const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
-const http = require('http');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -31,8 +30,5 @@ app.listen(port, () => {
     console.log(`Server started at ${Date()}!`);
     console.log(`Listening on port ${port}!`);
 })
-setInterval(function() {
-    http.get('https://graphcms-webhooks-discord.herokuapp.com/')
-}, 900000);
 
 module.exports = app;
